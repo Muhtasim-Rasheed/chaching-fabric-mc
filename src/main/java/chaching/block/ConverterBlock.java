@@ -23,8 +23,8 @@ public class ConverterBlock extends Block {
 		// Then, set their balance stat to 0
 		((ServerPlayerEntity) player).getStatHandler().setStat(player, ModStats.BALANCE_STAT, 0);
 
-		// Finally, give them that amount of cash
-		player.
+		// Finally, give them that amount of cash by running the give command
+		player.getServer().getCommandManager().executeWithPrefix(player.getCommandSource(), "give @s chaching:cash " + balance);
 
 		return super.onUse(state, world, pos, player, hit);
 	}
