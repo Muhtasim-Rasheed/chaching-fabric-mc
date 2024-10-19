@@ -3,6 +3,7 @@ package chaching;
 import chaching.block.ModBlocks;
 import chaching.cmd.ModCommands;
 import chaching.item.ModItems;
+import chaching.stats.ModStats;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
@@ -35,5 +36,8 @@ public class Chaching implements ModInitializer {
 		CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> {
 			ModCommands.init(dispatcher);
 		});
+
+		// Initialize stats
+		ModStats.init();
 	}
 }
