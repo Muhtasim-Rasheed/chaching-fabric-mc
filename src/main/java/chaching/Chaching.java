@@ -1,5 +1,6 @@
 package chaching;
 
+import chaching.block.ModBlocks;
 import chaching.cmd.ModCommands;
 import chaching.item.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -26,6 +27,9 @@ public class Chaching implements ModInitializer {
 
 		// Initialize items
 		ModItems.init();
+
+		// Initialize blocks
+		ModBlocks.init();
 
 		// Initialize commands
 		CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> {
